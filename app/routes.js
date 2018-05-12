@@ -4,10 +4,10 @@
 module.exports = function(app) {
     // application -------------------------------------------------------------
     // the default route for our application that serves the index.html
-    app.get('1', function(req, res) {
+    app.get('/original', function(req, res) {
         res.sendFile('./public/index1.html', { root: __dirname });
     });
-    app.get('*', function(req, res) {
+    app.get('/', function(req, res) {
         res.sendFile('./public/index.html', { root: __dirname });
     });
 
